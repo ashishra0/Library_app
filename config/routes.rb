@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   root 'welcome#home'
   resources :books
   resources :authors
-  resources :categories
+  resources :categories, except: [:destroy]
   resources :publishers
 end
