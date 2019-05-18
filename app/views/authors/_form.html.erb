@@ -1,0 +1,20 @@
+<% if @author.errors.any? %>
+  <h2> Following errors prevented article from getting created </h2>
+  <ul>
+    <% @author.errors.full_messages.each do |msg| %>
+    <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+
+<%= form_for @author do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </p>
+  <p>
+   <%= f.submit %>
+  </p>
+<% end %>
+
+<h3><%= link_to 'View other authors', authors_path %></h3>

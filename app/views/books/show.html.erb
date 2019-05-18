@@ -1,0 +1,4 @@
+<h1>Showing selected book</h1>
+<p>Title: <%= @book.title %> </p>
+<p><%= link_to 'Edit title', edit_book_path(@book) %></p>
+<p><%= link_to 'Delete book', book_path(@book), method: :delete, data: {confirm: "Are you sure"} %></p>
