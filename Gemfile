@@ -51,6 +51,8 @@ group :development do
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'rb-readline', '~> 0.5.3'
+  gem 'will_paginate', '~> 3.1', '>= 3.1.6'
+  gem 'will_paginate-bootstrap', '~> 1.0', '>= 1.0.2'
 end
 
 group :test do
@@ -59,6 +61,7 @@ group :test do
   gem 'selenium-webdriver'
   # Easy installation and use of chromedriver to run system tests with Chrome
   gem 'chromedriver-helper'
+  gem 'rails-controller-testing'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
