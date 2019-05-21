@@ -20,7 +20,17 @@
       </div>
       <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-          <%= f.submit class: 'btn btn-primary btn-lg'%>
+          <%= collection_select(:books, :category_ids, Category.all, :id, :name, {}, { :multiple => true } ) %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= select_tag(:author_id, options_for_select(@authors), :prompt => "Select Author") %>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+          <%= f.submit class: 'btn btn-primary btn-lg' %>
         </div>
       </div>
       <% end %>

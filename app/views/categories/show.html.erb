@@ -1,0 +1,18 @@
+<div class="page-header">
+  <h1>Books on <%= @category.name %></h1>
+</div>
+
+<div class="row">
+  <% @category.books.each do |book| %>
+  <div class="col-sm-6 col-md-3">
+    <div class="thumbnail">
+      <%= image_tag("startwithwhy") %>
+      <div class="caption">
+        <h5><%= book.title %></h5>
+        <p><%= link_to "Add to library", "#", class: "btn btn-primary"%></p>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+

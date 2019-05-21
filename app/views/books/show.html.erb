@@ -1,4 +1,20 @@
-<h1>Showing selected book</h1>
-<p>Title: <%= @book.title %> </p>
-<p><%= link_to 'Edit title', edit_book_path(@book) %></p>
-<p><%= link_to 'Delete book', book_path(@book), method: :delete, data: {confirm: "Are you sure"} %></p>
+<div class="page-header">
+  <h1>Showing Selected book</h1>
+</div>
+
+<div class="row show_book">
+  <div class="col-md-4">
+    <div class="caption">#1 Best seller in <%= @book.categories.map(&:name).join(', ')  %></div>
+      <div class="thumbnail">
+        <%= image_tag(("startwithwhy"), :class => "book_index") %>
+        <div class="caption">
+          <h3><%= @book.title %></h3>
+          <h5><%= @book.author.name %></h5>
+          <p><%= link_to 'Add to cart', "#", class: "btn btn-success" %></p>
+        </div>
+      </div>
+      <div class="col-md-4"><%= link_to 'Delete book', book_path(@book), method: :delete, data: {confirm: "Are you sure"}, class: "btn btn-danger btn-sm" %></div>
+      <p><%= link_to 'Edit book', edit_book_path(@book), class: "btn btn-default btn-sm" %></p>
+    </div>
+  </div>
+</div>

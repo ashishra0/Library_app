@@ -1,1 +1,18 @@
-<h1><%= @author.name %></h1>
+<div class="page-header">
+  <h1 align="center"><%= @author.name %></h1>
+</div>
+
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="thumbnail">
+      <%= image_tag(("simon.jpeg"), :class => "img-circle") %>
+    </div>
+    <button class="btn btn-primary" id="profile-btn">
+      Books <span class="badge"><%= @author.books.count %></span>
+    </button>
+    <div class="well">
+      <%= render 'layouts/lorem' %>
+    </div>
+  </div>
+</div>

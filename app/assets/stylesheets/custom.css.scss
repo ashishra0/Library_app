@@ -45,3 +45,38 @@ $navbar-default-bg: #08088A;
 .header {
   color: #fff;
 }
+
+.book_index {
+  height: auto;
+  width: 40%;
+  object-fit: contain;
+}
+
+#profile-btn {
+  margin-bottom: 10px;
+}
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #777;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+float: left;
+}
+
+footer ul {
+float: right;
+list-style: none;
+}
+
+footer ul li {
+float: left;
+margin-left: 15px;
+}

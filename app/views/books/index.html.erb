@@ -1,18 +1,20 @@
 <div class="page-header">
   <h1>Showing all books</h1>
 </div>
-<% @book.each do |book| %>
+
 <div class="row">
-  <div class="col-md-6">
+  <% @book.each do |book| %>
+  <div class="col-md-4">
     <div class="thumbnail">
-      <img src="" alt="">
+      <%= image_tag(("startwithwhy"), :class => "book_index") %>
       <div class="caption">
         <h3><%= book.title %></h3>
-        <p>Summary will be added soon</p>
+        <h5><%= book.author.name %></h5>
         <p><%= link_to 'view book', book_path(book), class: "btn btn-primary" %></p>
+        <p><%= link_to 'Add to cart', "#", class: "btn btn-success" %></p>
       </div>
     </div>
   </div>
+  <% end %>
 </div>
-<% end %>
 <%= render 'layouts/paginate', obj: @book %>
