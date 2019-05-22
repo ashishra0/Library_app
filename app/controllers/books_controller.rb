@@ -17,7 +17,7 @@ class BooksController < ApplicationController
     params[:books][:category_ids].each do |category_id|
       unless category_id.empty?
         category = Category.find(category_id)
-        @books.categories << Category
+        @book.categories << category
       end
     end
     if @book.save
